@@ -12,7 +12,7 @@ const configuration = new Configuration({ apiKey: OPENAI_API_KEY });
 const openAI = new OpenAIApi(configuration);
 app.engine(
   "handlebars",
-  exphbs.engine({ extname: ".handlebars", defaultLayout: false })
+  exphbs({ extname: ".handlebars", defaultLayout: false })
 );
 app.set("view engine", "handlebars");
 app.use(express.static("public"));
